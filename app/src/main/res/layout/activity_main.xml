@@ -6,13 +6,171 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#7CFEC4AC"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/alata"
+        android:text="@string/calculadora_de_imc"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/green_900"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/layoutSex"
+        android:layout_width="129dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="85dp"
+        android:orientation="horizontal"
+        android:outlineProvider="bounds"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageView
+            android:id="@+id/manButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/baseline_man_24"
+            app:tint="@color/orange"
+            tools:ignore="VisualLintBounds" />
+
+        <ImageView
+            android:id="@+id/womanButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/baseline_woman_24"
+            app:tint="@color/orange"
+            tools:ignore="VisualLintBounds" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pesoLayout"
+        android:layout_width="195dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/idadeLayout"
+        app:layout_constraintStart_toStartOf="@+id/idadeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/idadeLayout">
+
+        <EditText
+            android:id="@+id/pesoEditTextNumberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Peso"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/alturaLayout"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/pesoLayout"
+        app:layout_constraintStart_toStartOf="@+id/pesoLayout"
+        app:layout_constraintTop_toBottomOf="@+id/pesoLayout">
+
+        <EditText
+            android:id="@+id/alturaEditTextNumberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Altura"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idadeLayout"
+        android:layout_width="195dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/layoutSex"
+        app:layout_constraintStart_toStartOf="@+id/layoutSex"
+        app:layout_constraintTop_toBottomOf="@+id/layoutSex">
+
+        <EditText
+            android:id="@+id/idadeEditTextNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Idade"
+            android:inputType="numberSigned" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/anosTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="anos"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/idadeLayout"
+        app:layout_constraintStart_toEndOf="@+id/idadeLayout"
+        app:layout_constraintTop_toTopOf="@+id/idadeLayout"
+        app:layout_constraintVertical_bias="0.547" />
+
+    <TextView
+        android:id="@+id/kgTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="204dp"
+        android:text="kg"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/pesoLayout"
+        app:layout_constraintStart_toStartOf="@+id/pesoLayout"
+        app:layout_constraintTop_toTopOf="@+id/pesoLayout" />
+
+    <TextView
+        android:id="@+id/cmTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="cm"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/alturaLayout"
+        app:layout_constraintStart_toEndOf="@+id/alturaLayout"
+        app:layout_constraintTop_toTopOf="@+id/alturaLayout" />
+
+    <Button
+        android:id="@+id/calcularButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Calcular"
+        app:layout_constraintEnd_toEndOf="@+id/alturaLayout"
+        app:layout_constraintStart_toStartOf="@+id/alturaLayout"
+        app:layout_constraintTop_toBottomOf="@+id/alturaLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
