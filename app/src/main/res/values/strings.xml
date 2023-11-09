@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">IMC</string>
+    <string name="calculadora_de_imc">Calculadora de IMC</string>
+    <string name="todo">TODO</string>
+    <string name="peso">peso</string>
+    <string name="altura">Altura</string>
+    <string name="idade">Idade</string>
 </resources>
