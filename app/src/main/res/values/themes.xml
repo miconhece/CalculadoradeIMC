@@ -1,8 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.CalculadoradeIMC" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorPrimaryVariant">@color/pink_light</item>
+        <item name="colorSecondary">@color/green</item>
+        <item name="colorSecondaryVariant">#A9B04f</item>
+        <item name="colorTertiary">@color/orange</item>
+        <item name="colorAccent">@color/yellow</item>
+        <item name="colorError">#D63A2C</item>
+        <item name="colorOnPrimary">@color/material_dynamic_neutral30</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor">@color/pink_light</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="Theme.CalculadoradeIMC" parent="Base.Theme.CalculadoradeIMC" />
