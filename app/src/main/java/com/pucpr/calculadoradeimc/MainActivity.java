@@ -81,16 +81,16 @@ public class MainActivity extends AppCompatActivity {
             imcTextView.setTextColor(Color.rgb(213,0,0));
         } else if (imc > 16.9 && imc <= 18.4){
             classificacao = "Classificação do IMC: Magreza";
-            classificacaoTextView.setTextColor(Color.rgb(255,171,0));
-            imcTextView.setTextColor(Color.rgb(255,171,0));
+            classificacaoTextView.setTextColor(Color.rgb(214,106,44));
+            imcTextView.setTextColor(Color.rgb(214,106, 44));
         } else if (imc > 18.4 && imc <= 24.9){
             classificacao = "Classificação do IMC: Normal";
-            classificacaoTextView.setTextColor(Color.rgb(0,200,83));
-            imcTextView.setTextColor(Color.rgb(0,200,83));
+            classificacaoTextView.setTextColor(Color.rgb(78,100,38));
+            imcTextView.setTextColor(Color.rgb(78,100,38));
         } else if (imc > 24.9 && imc <= 29.9){
             classificacao = "Classificação do IMC: Sobrepeso";
-            classificacaoTextView.setTextColor(Color.rgb(255,171,0));
-            imcTextView.setTextColor(Color.rgb(255,171,0));
+            classificacaoTextView.setTextColor(Color.rgb(214,106,44));
+            imcTextView.setTextColor(Color.rgb(214,106,44));
         } else if (imc > 29.9 && imc <= 34.9){
             classificacao = "Classificação do IMC: Obesidade Grau I";
             classificacaoTextView.setTextColor(Color.rgb(213,0,0));

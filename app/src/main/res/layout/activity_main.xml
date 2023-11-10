@@ -11,7 +11,6 @@
         android:id="@+id/classificacaoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:fontFamily="@font/noto_sans"
         android:text="@string/classificacao"
         android:textAlignment="center"
@@ -66,8 +65,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:fontFamily="@font/noto_sans"
             android:hint="@string/Peso"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -85,8 +86,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:fontFamily="@font/noto_sans"
             android:hint="@string/Altura"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -105,7 +108,8 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/Idade"
-            android:inputType="numberSigned" />
+            android:inputType="numberSigned"
+            android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -138,6 +142,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/noto_sans"
         android:onClick="calcularButtonOnClick"
         android:text="@string/calcular"
         app:layout_constraintEnd_toEndOf="@+id/alturaLayout"

@@ -11,6 +11,6 @@
 
     <!-- Status Color -->
     <color name="danger">#D50000</color>
-    <color name="warning">#FFAB00</color>
+    <color name="warning">@color/yellow</color>
     <color name="success">#00C853</color>
 </resources>
