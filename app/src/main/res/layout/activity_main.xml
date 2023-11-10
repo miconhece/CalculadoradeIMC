@@ -42,7 +42,7 @@
         android:fontFamily="@font/alata"
         android:text="@string/calculadora_de_imc"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/green_900"
+        android:textColor="#212B0E"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
@@ -50,40 +50,6 @@
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
-    <LinearLayout
-        android:id="@+id/layoutSex"
-        android:layout_width="129dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        android:outlineProvider="bounds"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
-        <ImageView
-            android:id="@+id/manButton"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            android:importantForAccessibility="no"
-            app:srcCompat="@drawable/baseline_man_24"
-            app:tint="@color/orange"
-            tools:ignore="VisualLintBounds" />
-
-        <ImageView
-            android:id="@+id/womanButton"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/baseline_woman_24"
-            app:tint="@color/orange"
-            tools:ignore="VisualLintBounds" />
-    </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/pesoLayout"
@@ -128,9 +94,9 @@
         android:layout_width="195dp"
         android:layout_height="61dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/layoutSex"
-        app:layout_constraintStart_toStartOf="@+id/layoutSex"
-        app:layout_constraintTop_toBottomOf="@+id/layoutSex">
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <EditText
             android:id="@+id/idadeEditTextNumber"
@@ -186,7 +152,7 @@
         android:fontFamily="@font/noto_sans"
         android:text="IMC"
         android:textAlignment="center"
-        android:textColor="@color/green_900"
+        android:textColor="@color/pink"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/alturaLayout"
@@ -204,5 +170,15 @@
         app:layout_constraintBottom_toBottomOf="@+id/alturaLayout"
         app:layout_constraintStart_toEndOf="@+id/alturaLayout"
         app:layout_constraintTop_toTopOf="@+id/alturaLayout" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@mipmap/ic_launcher_round" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

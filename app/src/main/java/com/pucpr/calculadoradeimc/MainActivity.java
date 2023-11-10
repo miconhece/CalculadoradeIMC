@@ -74,27 +74,35 @@ public class MainActivity extends AppCompatActivity {
         if (imc <= 15.9){
             classificacao = "Classificação do IMC: Magreza Grave";
             classificacaoTextView.setTextColor(Color.rgb(213,0,0));
+            imcTextView.setTextColor(Color.rgb(213,0,0));
         } else if (imc > 15.9 && imc <= 16.9) {
             classificacao = "Classificação do IMC: Magreza Moderada";
             classificacaoTextView.setTextColor(Color.rgb(213,0,0));
+            imcTextView.setTextColor(Color.rgb(213,0,0));
         } else if (imc > 16.9 && imc <= 18.4){
             classificacao = "Classificação do IMC: Magreza";
             classificacaoTextView.setTextColor(Color.rgb(255,171,0));
+            imcTextView.setTextColor(Color.rgb(255,171,0));
         } else if (imc > 18.4 && imc <= 24.9){
             classificacao = "Classificação do IMC: Normal";
             classificacaoTextView.setTextColor(Color.rgb(0,200,83));
+            imcTextView.setTextColor(Color.rgb(0,200,83));
         } else if (imc > 24.9 && imc <= 29.9){
             classificacao = "Classificação do IMC: Sobrepeso";
             classificacaoTextView.setTextColor(Color.rgb(255,171,0));
+            imcTextView.setTextColor(Color.rgb(255,171,0));
         } else if (imc > 29.9 && imc <= 34.9){
             classificacao = "Classificação do IMC: Obesidade Grau I";
             classificacaoTextView.setTextColor(Color.rgb(213,0,0));
+            imcTextView.setTextColor(Color.rgb(213,0,0));
         } else if (imc > 34.9 && imc <= 39.9){
             classificacao = "Classificação do IMC: Obesidade Grau II";
             classificacaoTextView.setTextColor(Color.rgb(213,0,0));
+            imcTextView.setTextColor(Color.rgb(213,0,0));
         } else {
             classificacao = "Classificação do IMC: Obesidade Grau III";
             classificacaoTextView.setTextColor(Color.rgb(213,0,0));
+            imcTextView.setTextColor(Color.rgb(213,0,0));
         }
 
         classificacaoTextView.setText(String.valueOf(classificacao));
