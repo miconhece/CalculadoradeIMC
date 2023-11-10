@@ -13,4 +13,6 @@
     <string name="Idade">Idade</string>
     <string name="Altura">Altura</string>
     <string name="Peso">Peso</string>
+    <string name="classificacao">Classificação</string>
+    <string name="m">m</string>
 </resources>
