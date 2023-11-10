@@ -5,4 +5,14 @@
     <string name="peso">peso</string>
     <string name="altura">Altura</string>
     <string name="idade">Idade</string>
+    <string name="imc">IMC</string>
+    <string name="calcular">Calcular</string>
+    <string name="cm">cm</string>
+    <string name="kg">kg</string>
+    <string name="anos">anos</string>
+    <string name="Idade">Idade</string>
+    <string name="Altura">Altura</string>
+    <string name="Peso">Peso</string>
+    <string name="classificacao">Classificação</string>
+    <string name="m">m</string>
 </resources>

@@ -8,4 +8,9 @@
     <color name="yellow">#DC9E47</color>
     <color name="orange">#D66A2C</color>
     <color name="pink">#FEC4AC</color>
+
+    <!-- Status Color -->
+    <color name="danger">#D50000</color>
+    <color name="warning">@color/yellow</color>
+    <color name="success">#00C853</color>
 </resources>
