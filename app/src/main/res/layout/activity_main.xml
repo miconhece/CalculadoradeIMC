@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/noto_sans"
-        android:text="Classificação"
+        android:text="@string/classificacao"
         android:textAlignment="center"
         android:textColor="@color/green_900"
         android:textSize="16sp"
@@ -167,18 +167,6 @@
         app:layout_constraintStart_toStartOf="@+id/pesoLayout"
         app:layout_constraintTop_toTopOf="@+id/pesoLayout" />
 
-    <TextView
-        android:id="@+id/cmTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="@string/cm"
-        android:textColor="@color/yellow"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/alturaLayout"
-        app:layout_constraintStart_toEndOf="@+id/alturaLayout"
-        app:layout_constraintTop_toTopOf="@+id/alturaLayout" />
-
     <Button
         android:id="@+id/calcularButton"
         android:layout_width="wrap_content"
@@ -204,5 +192,17 @@
         app:layout_constraintEnd_toEndOf="@+id/alturaLayout"
         app:layout_constraintStart_toStartOf="@+id/alturaLayout"
         app:layout_constraintTop_toBottomOf="@+id/calcularButton" />
+
+    <TextView
+        android:id="@+id/mTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/m"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/alturaLayout"
+        app:layout_constraintStart_toEndOf="@+id/alturaLayout"
+        app:layout_constraintTop_toTopOf="@+id/alturaLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
