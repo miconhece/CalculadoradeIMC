@@ -4,7 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="false"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/classificacaoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/noto_sans"
+        android:text="Classificação"
+        android:textAlignment="center"
+        android:textColor="@color/green_900"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imcTextView"
+        app:layout_constraintStart_toStartOf="@+id/imcTextView"
+        app:layout_constraintTop_toBottomOf="@+id/imcTextView" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -39,7 +55,7 @@
         android:id="@+id/layoutSex"
         android:layout_width="129dp"
         android:layout_height="82dp"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal"
         android:outlineProvider="bounds"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +89,7 @@
         android:id="@+id/pesoLayout"
         android:layout_width="195dp"
         android:layout_height="57dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@+id/idadeLayout"
         app:layout_constraintStart_toStartOf="@+id/idadeLayout"
         app:layout_constraintTop_toBottomOf="@+id/idadeLayout">
@@ -84,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Peso"
+            android:hint="@string/Peso"
             android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,7 +108,7 @@
         android:id="@+id/alturaLayout"
         android:layout_width="0dp"
         android:layout_height="58dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@+id/pesoLayout"
         app:layout_constraintStart_toStartOf="@+id/pesoLayout"
         app:layout_constraintTop_toBottomOf="@+id/pesoLayout">
@@ -103,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Altura"
+            android:hint="@string/Altura"
             android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -111,7 +127,7 @@
         android:id="@+id/idadeLayout"
         android:layout_width="195dp"
         android:layout_height="61dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@+id/layoutSex"
         app:layout_constraintStart_toStartOf="@+id/layoutSex"
         app:layout_constraintTop_toBottomOf="@+id/layoutSex">
@@ -122,7 +138,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Idade"
+            android:hint="@string/Idade"
             android:inputType="numberSigned" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -131,7 +147,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="anos"
+        android:text="@string/anos"
         android:textColor="@color/yellow"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/idadeLayout"
@@ -144,7 +160,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="204dp"
-        android:text="kg"
+        android:text="@string/kg"
         android:textColor="@color/yellow"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/pesoLayout"
@@ -156,7 +172,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="cm"
+        android:text="@string/cm"
         android:textColor="@color/yellow"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/alturaLayout"
@@ -167,10 +183,26 @@
         android:id="@+id/calcularButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Calcular"
+        android:layout_marginTop="16dp"
+        android:onClick="calcularButtonOnClick"
+        android:text="@string/calcular"
         app:layout_constraintEnd_toEndOf="@+id/alturaLayout"
         app:layout_constraintStart_toStartOf="@+id/alturaLayout"
         app:layout_constraintTop_toBottomOf="@+id/alturaLayout" />
+
+    <TextView
+        android:id="@+id/imcTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/noto_sans"
+        android:text="IMC"
+        android:textAlignment="center"
+        android:textColor="@color/green_900"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/alturaLayout"
+        app:layout_constraintStart_toStartOf="@+id/alturaLayout"
+        app:layout_constraintTop_toBottomOf="@+id/calcularButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
